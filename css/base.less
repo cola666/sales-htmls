@@ -1,0 +1,172 @@
+@w:1200px;//主页面最小宽度
+@t-h:65px;//头部高度
+@logo-width:260px;//logo宽度
+@menus-width:220px;//左侧菜单的宽度
+@menus-min-heigth:600px;//中间部分的最小高度
+
+@b-c:#e7e8eb;//主要背景色
+@t-c:#fff;//头部背景色
+@body-c:#fff;//中间部分背景色
+@buttom-c:#fff;//底部背景色
+@f-c:#8d8d8d;//字体颜色(默认)
+@o-b-c:#d9dadc;//外边框颜色
+@i-b-c:#e7e7eb;//内边框颜色
+@a-h-c:#179AFC;//a标签鼠标悬浮颜色
+@m-c-c:#f4f5f9;;//左侧栏目被选中时的样式
+
+
+.tc{
+    display: table-cell;
+    vertical-align: top;
+}
+.none-a{
+    a{
+        text-decoration: none;
+        color: @f-c;
+    }
+    a:hover{
+        text-decoration: none;
+        color: @f-c;
+    }
+    a:linke{
+        text-decoration: none;
+        color: @f-c;
+    }
+    a:active{
+        text-decoration: none;
+        color: @f-c;
+    }
+    a:visited{
+        text-decoration: none;
+        color: @f-c;
+    }
+}
+//.out-border{
+//    border: solid 1px #d9dadc;
+//}
+//.inner-border{
+////    border:solid 1px #e7e7eb;
+//}
+
+//主体样式开始=================== body start
+body{
+    background-color: @b-c;
+    font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+//=================== body end
+
+
+//头部样式开始=================== top start
+.top {
+    background-color: @t-c;
+    
+//    width: 100%;
+    height: @t-h;
+    border-bottom: solid @o-b-c 1px;
+}
+
+.top-container {
+//    background-color: antiquewhite;
+    
+    width: @w;
+    height: @t-h;
+    margin: 0 auto;
+    
+    .logo , .users{
+//        .tc;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .logo{
+        height: @t-h;
+        width: @logo-width;
+        padding-top: 8px;
+        .none-a;
+        .logo-a{
+            font-size: 28px;
+            .logo-i{
+                font-size: 28px;
+            }
+            &:hover{
+                color: @a-h-c;
+            }
+        }
+    }
+    
+    .users{
+        height: @t-h;
+        width: 300px;
+        float: right;
+    }
+}
+//=================== top end
+
+
+.body{
+//    margin-top: 40px;
+    width: @w;
+    background-color: @body-c;
+    margin: 50px auto 20px auto;
+    border: solid @o-b-c 1px;
+    
+    .menus, .main{
+//        display: table-cell;
+//        .tc;
+        display: inline-block;
+        vertical-align: top;
+    }
+    //栏目样式开始=================== menus start
+    .menus{
+        width: @menus-width;
+        min-height: @menus-min-heigth;
+        border-right: solid @i-b-c 1px;
+        .items{
+            margin-top: 10px;
+            .item{
+                .none-a;
+                .item-a{
+                    line-height: 38px;
+                    padding-left: 30px;
+//                    border-top: solid red 1px;
+                    display: block;
+                    .item-icon{
+                        font-size: 18px;
+                        margin-right: 5px;
+                    }
+                    &:hover{
+                        background-color: @m-c-c;
+                        color: @a-h-c;
+                    }
+                }
+            }
+        }
+    }
+    //=================== menus end
+    
+    //主显示区域样式开始=================== main start
+    .main {
+        width: 200px;
+        min-height: @menus-min-heigth;
+    }
+    //=================== main end;
+    
+    
+}
+
+
+
+
+
+
+//底部样式开始=================== bottom start
+
+//=================== bottom end
+
+
+.bottom {
+    min-height: 70px;
+    background-color: @buttom-c;
+    border-top: solid @o-b-c 1px;
+}
