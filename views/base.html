@@ -15,9 +15,12 @@
     
     
 <!--    用于重写或全局样式定义的样式文件-->
-    <link href="../css/main.less" rel="stylesheet/less" type="text/css">
+<!--    <link href="../css/main.less" rel="stylesheet/less" type="text/css">-->
 <!--    base页面的样式-->
     <link href="../css/base.less" rel="stylesheet/less" type="text/css">
+    
+    
+    <script src="../lib/chart/dist/Chart.min.js"></script>
     
 </head>
 <body>
@@ -52,7 +55,7 @@
                   </a>
                 </dd>
                 <dd class="item">
-                   <a href="javascript:void(0)" class="item-a">
+                   <a href="javascript:void(0)" class="item-a" data-refresh-page="achievement">
                     <i class="icon icon-yeji item-icon"></i>
                     业绩管理
                   </a>
@@ -70,58 +73,15 @@
 
 <!--        中间右侧主显示区域样式开始-->
         <div class="main" id="main">
-           <div class="title-search-div">
-                <h3 class="menu-title">订单列表</h3>
-                <input type="text" class="title-search-input" />
-           </div>
-            <table class="table table-bordered table-hover">
-                <tr class="active">
-                    <th>订单号</th>
-                    <th>产品名称</th>
-                    <th>单价</th>
-                    <th>数量</th>
-                    <th>金额</th>
-                    <th>客户姓名</th>
-                    <th>支付日期</th>
-                    <th>订单状态</th>
-                </tr>
-                <tr>
-                    <td>SE201604052301</td>
-                    <td>美桔2号</td>
-                    <td>4.6</td>
-                    <td>30</td>
-                    <td>30432</td>
-                    <td>王小明</td>
-                    <td>2016-09-30</td>
-                    <td>已支付</td>
-                </tr>
-                <tr>
-                    <td>SE201604052301</td>
-                    <td>美桔2号</td>
-                    <td>4.6</td>
-                    <td>30</td>
-                    <td>30432</td>
-                    <td>王小明</td>
-                    <td>2016-09-30</td>
-                    <td>已支付</td>
-                </tr>
-                <tr>
-                    <td>SE201604052301</td>
-                    <td>美桔2号</td>
-                    <td>4.6</td>
-                    <td>30</td>
-                    <td>30432</td>
-                    <td>王小明</td>
-                    <td>2016-09-30</td>
-                    <td>已支付</td>
-                </tr>
-            </table>
+           
+           
         </div>
 <!--        =============== main end ===============-->
     </div>
 <!--    =============== body end ===============-->
 <!--    底部样式开始-->
     <div class="bottom"></div>
+    
     
 <!--    jquery框架js文件引入-->
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>

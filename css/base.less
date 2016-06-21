@@ -1,100 +1,32 @@
-@w:1200px;//主页面最小宽度
-@t-h:65px;//头部高度
-@logo-width:260px;//logo宽度
-@menus-width:220px;//左侧菜单的宽度
-@menus-min-heigth:600px;//中间部分的最小高度
+/*
+ * 项目公用的样式
+ */
 
-@b-c:#e7e8eb;//主要背景色
-@t-c:#fff;//头部背景色
-@body-c:#fff;//中间部分背景色
-@buttom-c:#fff;//底部背景色
-@f-c:#8d8d8d;//字体颜色(默认)
-@o-b-c:#d9dadc;//外边框颜色
-@i-b-c:#e7e7eb;//内边框颜色
-@a-h-c:#179AFC;//a标签鼠标悬浮颜色
-@m-c-c:#f4f5f9;;//左侧栏目被选中时的样式
+@import "./theme.less";
+@import "./rewrite&base.less";
+@import "./tools.less";
 
 
-.tc{
-    display: table-cell;
-    vertical-align: top;
-}
-.none-a{
-    a{
-        text-decoration: none;
-        color: @f-c;
-    }
-    a:hover{
-        text-decoration: none;
-        color: @f-c;
-    }
-    a:linke{
-        text-decoration: none;
-        color: @f-c;
-    }
-    a:active{
-        text-decoration: none;
-        color: @f-c;
-    }
-    a:visited{
-        text-decoration: none;
-        color: @f-c;
-    }
-}
-// 定义过度效果的样式
-.transition{
-	transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms,color 500ms,border-color 1000ms,background-color 500ms,top 500ms,opacity 500ms;
-	-webkit-transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms,color 500ms,border-color 1000ms,background-color 500ms,top 500ms,opacity 500ms;
-	-moz-transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms,color 500ms,border-color 1000ms,background-color 500ms,top 500ms,opacity 500ms;
-}
-table{
-    table-layout: fixed;
-}
-td{
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow: ellipsis;
-}
-//.out-border{
-//    border: solid 1px #d9dadc;
-//}
-//.inner-border{
-////    border:solid 1px #e7e7eb;
-//}
-
-//主体样式开始=================== body start
-body{
-    background-color: @b-c;
-    font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    color: @f-c;
-}
-
-//=================== body end
-
-
-//头部样式开始=================== top start
+/*
+ *头部样式开始 top start
+ */
+//头部总样式
 .top {
     background-color: @t-c;
-    
-//    width: 100%;
     height: @t-h;
     border-bottom: solid @o-b-c 1px;
 }
-
+//头部容器样式
 .top-container {
-//    background-color: antiquewhite;
-    
     width: @w;
     height: @t-h;
     margin: 0 auto;
-    
+    //设置对齐方式
     .logo , .users{
-//        .tc;
         display: inline-block;
         vertical-align: top;
     }
+    //logo部分的样式
     .logo{
         height: @t-h;
         width: @logo-width;
@@ -111,30 +43,32 @@ body{
             }
         }
     }
-    
+    //用户部分的样式
     .users{
         height: @t-h;
         width: 300px;
         float: right;
     }
 }
-//=================== top end
+//=================== top end ===================
 
 
+/*
+ * 中间样式开始 body start
+ */
 .body{
-//    margin-top: 40px;
     width: @w;
     background-color: @body-c;
     margin: 50px auto 20px auto;
     border: solid @o-b-c 1px;
-    
+    //左边菜单和右边主要部分的对齐方式
     .menus, .main{
-//        display: table-cell;
-//        .tc;
         display: inline-block;
         vertical-align: top;
     }
-    //栏目样式开始=================== menus start
+    /*
+     *栏目样式开始 menus start
+     */
     .menus{
         width: @menus-width;
         min-height: @menus-min-heigth;
@@ -147,7 +81,6 @@ body{
                     .transition;
                     line-height: 38px;
                     padding-left: 30px;
-//                    border-top: solid red 1px;
                     display: block;
                     .item-icon{
                         font-size: 18px;
@@ -165,42 +98,46 @@ body{
             }
         }
     }
-    //=================== menus end
+    //=================== menus end ===================
     
-    //主显示区域样式开始=================== main start
+    /*
+     *主显示区域样式开始 main start
+     */
     .main {
+        width: 970px;
+        min-height: 600px;
+        padding: 20px 30px;
+        min-height: @menus-min-heigth;
+        //主显示区域,头部区域样式
         .menu-title{
             border-bottom: solid @o-b-c 1px;
             font-size: 16px;
-            /* font-weight: 400; */
-            /* color: #999; */
             padding-bottom: 15px;
             margin-bottom: 20px;
         }
-//        width: 200px;
-        width: 970px;
-        min-height: 600px;
-        /* border: solid red 1px; */
-        padding: 20px 30px;
-        min-height: @menus-min-heigth;
+        
+        .chart-container{
+            min-height: 200px;
+            margin-bottom: 25px;
+            border: solid red 1px;
+        }
     }
-    //=================== main end;
+    //=================== main end ===================
     
     
 }
 
 
-
-
-
-
-//底部样式开始=================== bottom start
-
-//=================== bottom end
-
-
+/*
+ * 底部样式开始 bottom start
+ */
+//底部样式
 .bottom {
     min-height: 70px;
     background-color: @buttom-c;
     border-top: solid @o-b-c 1px;
 }
+
+//=================== bottom end ===================
+
+
