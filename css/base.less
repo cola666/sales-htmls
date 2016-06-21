@@ -41,6 +41,20 @@
         color: @f-c;
     }
 }
+// 定义过度效果的样式
+.transition{
+	transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms,color 500ms,border-color 1000ms,background-color 500ms,top 500ms,opacity 500ms;
+	-webkit-transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms,color 500ms,border-color 1000ms,background-color 500ms,top 500ms,opacity 500ms;
+	-moz-transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms,color 500ms,border-color 1000ms,background-color 500ms,top 500ms,opacity 500ms;
+}
+table{
+    table-layout: fixed;
+}
+td{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
 //.out-border{
 //    border: solid 1px #d9dadc;
 //}
@@ -54,7 +68,9 @@ body{
     font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
+    color: @f-c;
 }
+
 //=================== body end
 
 
@@ -87,7 +103,8 @@ body{
         .logo-a{
             font-size: 28px;
             .logo-i{
-                font-size: 28px;
+                font-size: 32px;
+                color: #ff7680;
             }
             &:hover{
                 color: @a-h-c;
@@ -127,6 +144,7 @@ body{
             .item{
                 .none-a;
                 .item-a{
+                    .transition;
                     line-height: 38px;
                     padding-left: 30px;
 //                    border-top: solid red 1px;
@@ -140,6 +158,10 @@ body{
                         color: @a-h-c;
                     }
                 }
+                .checked-menu{
+                    background-color: @m-c-c;
+                    color: @a-h-c;
+                }
             }
         }
     }
@@ -147,7 +169,19 @@ body{
     
     //主显示区域样式开始=================== main start
     .main {
-        width: 200px;
+        .menu-title{
+            border-bottom: solid @o-b-c 1px;
+            font-size: 16px;
+            /* font-weight: 400; */
+            /* color: #999; */
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+//        width: 200px;
+        width: 970px;
+        min-height: 600px;
+        /* border: solid red 1px; */
+        padding: 20px 30px;
         min-height: @menus-min-heigth;
     }
     //=================== main end;

@@ -23,11 +23,25 @@
   text-decoration: none;
   color: #8d8d8d;
 }
+.transition {
+  transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms, color 500ms, border-color 1000ms, background-color 500ms, top 500ms, opacity 500ms;
+  -webkit-transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms, color 500ms, border-color 1000ms, background-color 500ms, top 500ms, opacity 500ms;
+  -moz-transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms, color 500ms, border-color 1000ms, background-color 500ms, top 500ms, opacity 500ms;
+}
+table {
+  table-layout: fixed;
+}
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 body {
   background-color: #e7e8eb;
   font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", SimHei, tahoma, sans-serif;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
+  color: #8d8d8d;
 }
 .top {
   background-color: #ffffff;
@@ -73,7 +87,8 @@ body {
   font-size: 28px;
 }
 .top-container .logo .logo-a .logo-i {
-  font-size: 28px;
+  font-size: 32px;
+  color: #ff7680;
 }
 .top-container .logo .logo-a:hover {
   color: #179afc;
@@ -123,6 +138,9 @@ body {
   color: #8d8d8d;
 }
 .body .menus .items .item .item-a {
+  transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms, color 500ms, border-color 1000ms, background-color 500ms, top 500ms, opacity 500ms;
+  -webkit-transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms, color 500ms, border-color 1000ms, background-color 500ms, top 500ms, opacity 500ms;
+  -moz-transition: height 1s, width 1s, box-shadow 1000ms, -moz-box-shadow 1000ms, -webkit-box-shadow 1000ms, color 500ms, border-color 1000ms, background-color 500ms, top 500ms, opacity 500ms;
   line-height: 38px;
   padding-left: 30px;
   display: block;
@@ -135,9 +153,23 @@ body {
   background-color: #f4f5f9;
   color: #179afc;
 }
+.body .menus .items .item .checked-menu {
+  background-color: #f4f5f9;
+  color: #179afc;
+}
 .body .main {
-  width: 200px;
+  width: 970px;
+  /* border: solid red 1px; */
+  padding: 20px 30px;
   min-height: 600px;
+}
+.body .main .menu-title {
+  border-bottom: solid #d9dadc 1px;
+  font-size: 16px;
+  /* font-weight: 400; */
+  /* color: #999; */
+  padding-bottom: 15px;
+  margin-bottom: 20px;
 }
 .bottom {
   min-height: 70px;
