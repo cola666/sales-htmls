@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>销售管理系统</title>
-    
-<!--    bootstrap框架的样式-->
+
+    <!--    bootstrap框架的样式-->
     <link href="../lib/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<!--    bootstrap时间选择器插件的样式-->
+    <!--    bootstrap时间选择器插件的样式-->
     <link href="../lib/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
-<!--    bootstrap中button的样式-->
+    <!--    bootstrap中button的样式-->
     <link href="../lib/css/buttons.css" rel="stylesheet" type="text/css">
     <link href="../lib/iconfont/iconfont.css" rel="stylesheet" type="text/css">
-    
-    
-<!--    用于重写或全局样式定义的样式文件-->
-<!--    <link href="../css/main.less" rel="stylesheet/less" type="text/css">-->
-<!--    base页面的样式-->
+
+
+    <!--    用于重写或全局样式定义的样式文件-->
+    <!--    <link href="../css/main.less" rel="stylesheet/less" type="text/css">-->
+    <!--    base页面的样式-->
     <link href="../css/base.less" rel="stylesheet/less" type="text/css">
-    
-    
-    <script src="../lib/chart/dist/Chart.min.js"></script>
-    
+
+
+    <!--    <script src="../lib/chart/dist/Chart.min.js"></script>-->
+    <script src="../lib/js/echarts.min.js"></script>
+
 </head>
+
 <body>
-<!--   头部样式开始-->
+    <!--   头部样式开始-->
     <div class="top">
         <div class="top-container">
             <div class="logo">
@@ -36,65 +39,67 @@
             <div class="users"></div>
         </div>
     </div>
-<!--    =============== top end ===============-->
-<!--    中间部分样式开始-->
+    <!--    =============== top end ===============-->
+    <!--    中间部分样式开始-->
     <div class="body">
-<!--       中间,左侧菜单样式-->
+        <!--       中间,左侧菜单样式-->
         <div class="menus">
             <dl class="items">
                 <dd class="item">
-                  <a href="javascript:void(0)" class="item-a checked-menu">
-                    <i class="icon icon-xiaoshou item-icon"></i>
-                    销售管理
-                  </a>
+                    <a href="javascript:void(0)" class="item-a checked-menu">
+                        <i class="icon icon-xiaoshou item-icon"></i>
+                        销售管理
+                    </a>
                 </dd>
                 <dd class="item">
-                   <a href="javascript:void(0)" class="item-a" data-refresh-page="order">
-                    <i class="icon icon-dingdan item-icon"></i>
-                    订单管理
-                  </a>
+                    <a href="javascript:void(0)" class="item-a" data-refresh-page="order">
+                        <i class="icon icon-dingdan item-icon"></i>
+                        订单管理
+                    </a>
                 </dd>
                 <dd class="item">
-                   <a href="javascript:void(0)" class="item-a" data-refresh-page="achievement">
-                    <i class="icon icon-yeji item-icon"></i>
-                    业绩管理
-                  </a>
+                    <a href="javascript:void(0)" class="item-a" data-refresh-page="achievement">
+                        <i class="icon icon-yeji item-icon"></i>
+                        业绩管理
+                    </a>
                 </dd>
                 <dd class="item">
-                   <a href="javascript:void(0)" class="item-a">
-                    <i class="icon icon-kehu item-icon"></i>
-                    客户管理
-                  </a>
+                    <a href="javascript:void(0)" class="item-a">
+                        <i class="icon icon-kehu item-icon"></i>
+                        客户管理
+                    </a>
                 </dd>
             </dl>
         </div>
-<!--        =============== menus end ===============-->
+        <!--        =============== menus end ===============-->
 
 
-<!--        中间右侧主显示区域样式开始-->
+        <!--        中间右侧主显示区域样式开始-->
         <div class="main" id="main">
-           
-           
+            <div class="main-container" id="main-container">
+                
+            </div>
+
         </div>
-<!--        =============== main end ===============-->
+        <!--        =============== main end ===============-->
     </div>
-<!--    =============== body end ===============-->
-<!--    底部样式开始-->
+    <!--    =============== body end ===============-->
+    <!--    底部样式开始-->
     <div class="bottom"></div>
-    
-    
-<!--    jquery框架js文件引入-->
+
+
+    <!--    jquery框架js文件引入-->
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
-<!--    bootstrap框架js文件引入-->
+    <!--    bootstrap框架js文件引入-->
     <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
-<!--    bootstrap时间选择区文件引入-->
+    <!--    bootstrap时间选择区文件引入-->
     <script type="text/javascript" src="../lib/js/bootstrap-datepicker.min.js"></script>
-<!--    less解析的js文件引入-->
+    <!--    less解析的js文件引入-->
     <script type="text/javascript" src="../lib/js/less.min.js"></script>
-<!--    主页面或全局中交互的js文件引入-->
+    <!--    主页面或全局中交互的js文件引入-->
     <script type="text/javascript" src="../js/base.js"></script>
-<!--    用来测试前端样式及测试交互的js文件引入-->
+    <!--    用来测试前端样式及测试交互的js文件引入-->
     <script type="text/javascript" src="../js/demo.js"></script>
-    
 </body>
+
 </html>

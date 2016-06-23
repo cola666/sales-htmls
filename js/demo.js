@@ -11,8 +11,8 @@ $(function(){
 			//- contentType: false,
 			//- processData: false,
 			success: function(data) {
-				 console.log(data);
-            $("#main").html(data);
+//				 console.log(data);
+            $("#main-container").html(data);
 //				cb(data);
 			},
 			error: function() {
@@ -24,7 +24,7 @@ $(function(){
 
     $(document).on("click","[data-refresh-page='achievement']",function(){
         $.ajax({
-			url: './achievement.html',
+			url: './achi_gg.html',
 			type: 'GET',
 			data: {
 				// _id: user_id
@@ -34,8 +34,8 @@ $(function(){
 			//- contentType: false,
 			//- processData: false,
 			success: function(data) {
-				 console.log(data);
-            $("#main").html(data);
+//				 console.log(data);
+            $("#main-container").html(data);
 //				cb(data);
 			},
 			error: function() {

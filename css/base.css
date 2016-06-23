@@ -158,7 +158,7 @@ body {
   color: #8d8d8d;
 }
 .top-container .logo .logo-a {
-  font-size: 28px;
+  font-size: 26px;
 }
 .top-container .logo .logo-a .logo-i {
   font-size: 32px;
@@ -189,7 +189,7 @@ body {
 }
 .body .menus,
 .body .main {
-  display: inline-block;
+  display: table-cell;
   vertical-align: top;
 }
 .body .menus {
@@ -245,6 +245,9 @@ body {
   padding: 20px 30px;
   min-height: 600px;
 }
+.body .main .main-container {
+  min-height: 600px;
+}
 .body .main .menu-title {
   border-bottom: solid #d9dadc 1px;
   font-size: 16px;
@@ -254,7 +257,11 @@ body {
 .body .main .chart-container {
   min-height: 200px;
   margin-bottom: 25px;
-  border: solid red 1px;
+  border: solid #e7e7eb 1px;
+}
+.body .main .chart-container div {
+  display: inline-block;
+  vertical-align: top;
 }
 /*
  * 底部样式开始 bottom start

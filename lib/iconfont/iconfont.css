@@ -1,10 +1,10 @@
 
 @font-face {font-family: "icon";
-  src: url('iconfont.eot?t=1466406418'); /* IE9*/
-  src: url('iconfont.eot?t=1466406418#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1466406418') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1466406418') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1466406418#icon') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1466664495'); /* IE9*/
+  src: url('iconfont.eot?t=1466664495#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1466664495') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1466664495') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1466664495#icon') format('svg'); /* iOS 4.1- */
 }
 
 .icon {
@@ -20,5 +20,6 @@
 .icon-logo1:before { content: "\e605"; }
 .icon-chanpin:before { content: "\e602"; }
 .icon-kehu:before { content: "\e603"; }
+.icon-xiangqing:before { content: "\e607"; }
 .icon-logo11:before { content: "\e606"; }
 .icon-yeji:before { content: "\e604"; }
