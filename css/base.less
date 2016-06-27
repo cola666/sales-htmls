@@ -18,9 +18,12 @@
 }
 //头部容器样式
 .top-container {
-    width: @w;
-    height: @t-h;
-    margin: 0 auto;
+    background-color: @t-c;
+//    width: @w;
+    height: @t-h - 1;
+    min-width: @w;
+//    margin: 0 auto;
+    margin-left: 4.17%;
     //设置对齐方式
     .logo , .users{
         display: inline-block;
@@ -46,8 +49,18 @@
     //用户部分的样式
     .users{
         height: @t-h;
-        width: 300px;
+        width: 120px;
         float: right;
+        padding-top: 12px;
+        p{
+            margin: 0;
+        }
+        .user-name{
+            color: @f-c - 50;
+        }
+        .login-time{
+            color: @f-c + 50;
+        }
     }
 }
 //=================== top end ===================
@@ -57,9 +70,12 @@
  * 中间样式开始 body start
  */
 .body{
-    width: @w;
+    min-width: @w;
     background-color: @body-c;
-    margin: 50px auto 20px auto;
+//    margin: 50px auto 20px auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 4.17%;
     border: solid @o-b-c 1px;
     //左边菜单和右边主要部分的对齐方式
     .menus, .main{
@@ -71,9 +87,11 @@
      *栏目样式开始 menus start
      */
     .menus{
-        width: @menus-width;
+//        width: @menus-width;
+        min-width: @menus-min-width;
         min-height: @menus-min-heigth;
-        border-right: solid @i-b-c 1px;
+        
+//        float: none;
         .items{
             margin-top: 10px;
             .item{
@@ -105,10 +123,13 @@
      *主显示区域样式开始 main start
      */
     .main {
-        width: 970px;
+//        width: 970px;
         min-height: 600px;
         padding: 20px 30px;
         min-height: @menus-min-heigth;
+        border-left: solid @i-b-c 1px;
+//        float: none;
+//        min-width: @w;
         .main-container{
             min-height: 600px;
         }
@@ -124,11 +145,75 @@
             min-height: 200px;
             margin-bottom: 25px;
             border: solid @i-b-c 1px;
-            div{
+            .chart-box{
+                display: inline-block;
+                width: 49%;
+            }
+            .chart-item{
 //                border: solid red 1px;
                 display: inline-block;
                 vertical-align: top;
                 
+            }
+            .chart-condition{
+                display: inline-block;
+                vertical-align: top;
+                width: 450px;
+                padding-left: 25px;
+//                padding-right: 25px;
+                margin-bottom: 15px;
+                .datetime-condition{
+                    display: inline-block;
+                    padding: 0 10px;
+//                    vertical-align: top;
+                }
+            }
+        }
+        
+//        多组合列表栏目样式
+        .auto-lines-container{
+            .auto-line-box{
+                padding-right: 15px;
+                &:last-child{
+                    padding-right: 0px;
+                }
+                dl{
+                    
+                    border: solid @o-b-c 1px;
+                    min-height: 500px;
+                    dt,dd{
+//                        height: 
+                        padding: 8px 15px;
+                    }
+                }
+                dt{
+                    background-color: @m-c-c;
+                }
+                dd{
+//                    <dd>
+//                        <labal class="lines-item">江苏绿能宝融资租赁有限公司</labal>
+//                        <i class="icon icon-xiangqing line-icon"></i>
+//                    </dd>
+                    border-top: solid @o-b-c 1px;
+                    
+                    &:hover{
+                        background-color: @m-c-c;
+                        color: @a-h-c;
+                        cursor:pointer;
+                    }
+                    .lines-item{
+                    }
+                    .line-icon{
+                        color: @f-c;
+                        float: right;
+                        cursor:default;
+                        &:hover{
+//                            background-color: @m-c-c;
+                            color: @a-h-c;
+//                            cursor:pointer;
+                        }
+                    }
+                }
             }
         }
     }

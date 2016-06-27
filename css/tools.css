@@ -8,6 +8,14 @@
   float: right;
   margin-top: -65px;
 }
+.title-search-div .title-tips-container {
+  float: right;
+  margin-top: -55px;
+}
+.title-search-div .title-tips-container i {
+  font-size: 18px;
+  padding: 0 3px;
+}
 .pages-div {
   text-align: center;
 }

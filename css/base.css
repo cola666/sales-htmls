@@ -40,6 +40,57 @@
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 /**********************重写bootstrap end*******************************/
 /**
 *重写buttons样式----开始
@@ -106,6 +157,17 @@ body {
   float: right;
   margin-top: -65px;
 }
+.title-search-div .title-tips-container {
+  float: right;
+  margin-top: -55px;
+}
+.title-search-div .title-tips-container i {
+  font-size: 18px;
+  padding: 0 3px;
+}
+.title-search-div .title-tips-container i:hover {
+  color: #179afc;
+}
 .pages-div {
   text-align: center;
 }
@@ -123,9 +185,10 @@ body {
   border-bottom: solid #d9dadc 1px;
 }
 .top-container {
-  width: 1200px;
-  height: 65px;
-  margin: 0 auto;
+  background-color: #ffffff;
+  height: 64px;
+  min-width: 1200px;
+  margin-left: 4.17%;
 }
 .top-container .logo,
 .top-container .users {
@@ -169,16 +232,28 @@ body {
 }
 .top-container .users {
   height: 65px;
-  width: 300px;
+  width: 120px;
   float: right;
+  padding-top: 12px;
+}
+.top-container .users p {
+  margin: 0;
+}
+.top-container .users .user-name {
+  color: #5b5b5b;
+}
+.top-container .users .login-time {
+  color: #bfbfbf;
 }
 /*
  * 中间样式开始 body start
  */
 .body {
-  width: 1200px;
+  min-width: 1200px;
   background-color: #ffffff;
-  margin: 50px auto 20px auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 4.17%;
   border: solid #d9dadc 1px;
   /*
      *栏目样式开始 menus start
@@ -193,9 +268,8 @@ body {
   vertical-align: top;
 }
 .body .menus {
-  width: 220px;
+  min-width: 180px;
   min-height: 600px;
-  border-right: solid #e7e7eb 1px;
 }
 .body .menus .items {
   margin-top: 10px;
@@ -241,9 +315,9 @@ body {
   color: #179afc;
 }
 .body .main {
-  width: 970px;
   padding: 20px 30px;
   min-height: 600px;
+  border-left: solid #e7e7eb 1px;
 }
 .body .main .main-container {
   min-height: 600px;
@@ -259,9 +333,57 @@ body {
   margin-bottom: 25px;
   border: solid #e7e7eb 1px;
 }
-.body .main .chart-container div {
+.body .main .chart-container .chart-box {
+  display: inline-block;
+  width: 49%;
+}
+.body .main .chart-container .chart-item {
   display: inline-block;
   vertical-align: top;
+}
+.body .main .chart-container .chart-condition {
+  display: inline-block;
+  vertical-align: top;
+  width: 450px;
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+.body .main .chart-container .chart-condition .datetime-condition {
+  display: inline-block;
+  padding: 0 10px;
+}
+.body .main .auto-lines-container .auto-line-box {
+  padding-right: 15px;
+}
+.body .main .auto-lines-container .auto-line-box:last-child {
+  padding-right: 0px;
+}
+.body .main .auto-lines-container .auto-line-box dl {
+  border: solid #d9dadc 1px;
+  min-height: 500px;
+}
+.body .main .auto-lines-container .auto-line-box dl dt,
+.body .main .auto-lines-container .auto-line-box dl dd {
+  padding: 8px 15px;
+}
+.body .main .auto-lines-container .auto-line-box dt {
+  background-color: #f4f5f9;
+}
+.body .main .auto-lines-container .auto-line-box dd {
+  border-top: solid #d9dadc 1px;
+}
+.body .main .auto-lines-container .auto-line-box dd:hover {
+  background-color: #f4f5f9;
+  color: #179afc;
+  cursor: pointer;
+}
+.body .main .auto-lines-container .auto-line-box dd .line-icon {
+  color: #8d8d8d;
+  float: right;
+  cursor: default;
+}
+.body .main .auto-lines-container .auto-line-box dd .line-icon:hover {
+  color: #179afc;
 }
 /*
  * 底部样式开始 bottom start

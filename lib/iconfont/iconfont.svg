@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Thu Jun 23 14:48:15 2016
+Created by FontForge 20120731 at Fri Jun 24 17:15:43 2016
  By admin
 </metadata>
 <defs>
@@ -19,7 +19,7 @@ Created by FontForge 20120731 at Thu Jun 23 14:48:15 2016
     bbox="-0.225 -128 1024.29 896"
     underline-thickness="50"
     underline-position="-100"
-    unicode-range="U+0078-E607"
+    unicode-range="U+0078-E609"
   />
 <missing-glyph horiz-adv-x="374" 
 d="M34 0v682h272v-682h-272zM68 34h204v614h-204v-614z" />
@@ -70,5 +70,11 @@ l-102 -177l71 -50l-67 -156l176 183l-87 46z" />
     <glyph glyph-name="uniE607" unicode="&#xe607;" 
 d="M231 564v-1l2 1h-2zM865 634l-189 189q-10 10 -24 8h-54h-382q-27 0 -46.5 -19t-19.5 -46v-763q0 -27 19.5 -46.5t46.5 -19.5h592q27 0 46.5 19.5t19.5 46.5v548v57q2 16 -9 26zM801 611h-135q-8 0 -8 7v136zM813 3q0 -5 -5 -5h-592q-6 0 -6 5v763q0 5 6 5h382v-153
 q0 -28 20 -47.5t48 -19.5h147v-548zM316 374v-7q0 -10 8 -18t19 -8h338q11 0 18.5 8t7.5 18v7q0 11 -7.5 19t-18.5 8h-338q-11 0 -19 -8t-8 -19zM681 233h-338q-11 0 -19 -8t-8 -19v-7q0 -11 8 -19t19 -8h338q11 0 18.5 8t7.5 19v7q0 11 -7.5 19t-18.5 8z" />
+    <glyph glyph-name="uniE608" unicode="&#xe608;" 
+d="M909 435v-415h-794v415h-50v-463h894v21v442h-50zM513 137l51 51l190 178l-36 36l-181 -165v559h-49v-559l-180 165l-37 -36l190 -178z" />
+    <glyph glyph-name="uniE609" unicode="&#xe609;" 
+d="M917 822q-36 -20 -102 -40q-135 -39 -301.5 -39t-301.5 39q-67 20 -102 40l-54 31l1 -63q3 -206 56 -376q45 -143 125 -257q109 -157 259 -233l16 -9l16 9q150 77 259 233q80 114 126 257q53 170 56 376l1 63zM166 523q40 31 81 42t71 5t54.5 -16t37.5 -20l12 -11
+q-40 -37 -81.5 -50.5t-71.5 -7t-54 20t-36.5 25t-12.5 12.5zM514 -45v1h-1v126q40 26 72 55t48.5 51.5t28 43t14.5 30t3 10.5h-166q0 435 1 435q77 0 149 9t119.5 21t83.5 24.5t53 20.5l16 9q-2 -119 -21 -225t-47.5 -183.5t-68.5 -145.5t-77.5 -112t-80 -81.5t-71 -56
+t-55.5 -32.5zM514 -45z" />
   </font>
 </defs></svg>

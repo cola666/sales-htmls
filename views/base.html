@@ -29,24 +29,29 @@
 <body>
     <!--   头部样式开始-->
     <div class="top">
-        <div class="top-container">
+        <div class="top-container col-md-11">
             <div class="logo">
                 <a href="javascript:void(0)" class="logo-a">
                     <i class="icon icon-logo1 logo-i"></i>
                     销售管理系统
                 </a>
             </div>
-            <div class="users"></div>
+            <div class="users">
+                <p class="user-name">张铁锤</p>
+                <p class="login-time">
+                    2016-04-28
+                </p>
+            </div>
         </div>
     </div>
     <!--    =============== top end ===============-->
     <!--    中间部分样式开始-->
-    <div class="body">
+    <div class="body col-md-11">
         <!--       中间,左侧菜单样式-->
-        <div class="menus">
+        <div class="menus col-md-2">
             <dl class="items">
                 <dd class="item">
-                    <a href="javascript:void(0)" class="item-a checked-menu">
+                    <a href="javascript:void(0)" class="item-a checked-menu" data-refresh-page="sales">
                         <i class="icon icon-xiaoshou item-icon"></i>
                         销售管理
                     </a>
@@ -75,17 +80,16 @@
 
 
         <!--        中间右侧主显示区域样式开始-->
-        <div class="main" id="main">
+        <div class="main col-md-10" id="main">
             <div class="main-container" id="main-container">
                 
             </div>
-
         </div>
         <!--        =============== main end ===============-->
     </div>
     <!--    =============== body end ===============-->
     <!--    底部样式开始-->
-    <div class="bottom"></div>
+<!--    <div class="bottom"></div>-->
 
 
     <!--    jquery框架js文件引入-->
@@ -94,12 +98,16 @@
     <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
     <!--    bootstrap时间选择区文件引入-->
     <script type="text/javascript" src="../lib/js/bootstrap-datepicker.min.js"></script>
+<!--    时间选择器的国际化,js设置-->
+    <script type="text/javascript" src="../lib/js/bootstrap-datepicker-zh.js"></script>
+<!--    <script type="text/javascript" src="../lib/js/bootstrap-datetimepicker.zh-CN.js"></script>-->
     <!--    less解析的js文件引入-->
     <script type="text/javascript" src="../lib/js/less.min.js"></script>
     <!--    主页面或全局中交互的js文件引入-->
     <script type="text/javascript" src="../js/base.js"></script>
     <!--    用来测试前端样式及测试交互的js文件引入-->
     <script type="text/javascript" src="../js/demo.js"></script>
+    
 </body>
 
 </html>
