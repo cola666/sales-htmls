@@ -75,7 +75,7 @@ $(function() {
         var xsId = $(this).data("xs-value-id");
         var xsName = $(this).data("xs-value-name");
         //存储xsname和xsid
-         console.log('aaaaaaaaaaaaaaaa');
+         //console.log('aaaaaaaaaaaaaaaa');
         $("#add-dl-model-xs-name").val(xsName);
         $("#add-dl-model-xs-id").val(xsId);
         // console.log('aaaaaaaaaaaaaaaa');
