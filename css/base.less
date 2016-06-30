@@ -5,6 +5,7 @@
 @import "./theme.less";
 @import "./rewrite&base.less";
 @import "./tools.less";
+@import "./roles.less";
 
 
 /*
@@ -12,16 +13,16 @@
  */
 //头部总样式
 .top {
-    background-color: @t-c;
-    height: @t-h;
-    border-bottom: solid @o-b-c 1px;
+    background-color: @top-background-color;
+    height: @top-heigth;
+    border-bottom: solid @out-border-color 1px;
 }
 //头部容器样式
 .top-container {
-    background-color: @t-c;
-//    width: @w;
-    height: @t-h - 1;
-    min-width: @w;
+    background-color: @top-background-color;
+//    width: @body-width;
+    height: @top-heigth - 1;
+    min-width: @body-width;
 //    margin: 0 auto;
     margin-left: 4.17%;
     //设置对齐方式
@@ -31,7 +32,7 @@
     }
     //logo部分的样式
     .logo{
-        height: @t-h;
+        height: @top-heigth;
         width: @logo-width;
         padding-top: 8px;
         .none-a;
@@ -42,25 +43,39 @@
                 color: #ff7680;
             }
             &:hover{
-                color: @a-h-c;
+                color: @a-hover-color;
             }
         }
     }
     //用户部分的样式
     .users{
-        height: @t-h;
-        width: 120px;
+        height: @top-heigth;
+        width: 230px;
         float: right;
         padding-top: 12px;
         p{
             margin: 0;
         }
         .user-name{
-            color: @f-c - 50;
+            color: @font-color + 50;
         }
         .login-time{
-            color: @f-c + 50;
+            color: @font-color + 50;
         }
+        .top-user-lable,.top-user-info{
+            display: inline-block;
+            vertical-align: top;
+        }
+        .top-user-lable{
+            text-align: right;
+            color: @font-color - 60;
+            padding-right: 5px;
+        }
+//        .top-user-info{
+//            .user-name,.login-time{
+//                display: block;
+//            }
+//        }
     }
 }
 //=================== top end ===================
@@ -70,13 +85,13 @@
  * 中间样式开始 body start
  */
 .body{
-    min-width: @w;
-    background-color: @body-c;
+    min-width: @body-width;
+    background-color: @body-background-color;
 //    margin: 50px auto 20px auto;
     margin-top: 50px;
     margin-bottom: 20px;
     margin-left: 4.17%;
-    border: solid @o-b-c 1px;
+    border: solid @out-border-color 1px;
     //左边菜单和右边主要部分的对齐方式
     .menus, .main{
 //        display: inline-block;
@@ -106,13 +121,13 @@
                         margin-right: 5px;
                     }
                     &:hover{
-                        background-color: @m-c-c;
-                        color: @a-h-c;
+                        background-color: @menu-checked-background-color;
+                        color: @a-hover-color;
                     }
                 }
                 .checked-menu{
-                    background-color: @m-c-c;
-                    color: @a-h-c;
+                    background-color: @menu-checked-background-color;
+                    color: @a-hover-color;
                 }
             }
         }
@@ -127,15 +142,15 @@
         min-height: 600px;
         padding: 20px 30px;
         min-height: @menus-min-heigth;
-        border-left: solid @i-b-c 1px;
+        border-left: solid @inner-border-color 1px;
 //        float: none;
-//        min-width: @w;
+//        min-width: @body-width;
         .main-container{
             min-height: 600px;
         }
         //主显示区域,头部区域样式
         .menu-title{
-            border-bottom: solid @o-b-c 1px;
+            border-bottom: solid @out-border-color 1px;
             font-size: 16px;
             padding-bottom: 15px;
             margin-bottom: 20px;
@@ -144,7 +159,7 @@
         .chart-container{
             min-height: 200px;
             margin-bottom: 25px;
-            border: solid @i-b-c 1px;
+            border: solid @inner-border-color 1px;
             .chart-box{
                 display: inline-block;
                 width: 49%;
@@ -179,7 +194,7 @@
                 }
                 dl{
                     
-                    border: solid @o-b-c 1px;
+                    border: solid @out-border-color 1px;
                     min-height: 500px;
                     dt,dd{
 //                        height: 
@@ -187,31 +202,38 @@
                     }
                 }
                 dt{
-                    background-color: @m-c-c;
+                    background-color: @menu-checked-background-color;
+                    .lines-item-icon{
+                        float: right;
+                    }
                 }
                 dd{
 //                    <dd>
 //                        <labal class="lines-item">江苏绿能宝融资租赁有限公司</labal>
 //                        <i class="icon icon-xiangqing line-icon"></i>
 //                    </dd>
-                    border-top: solid @o-b-c 1px;
+                    border-top: solid @out-border-color 1px;
                     
                     &:hover{
-                        background-color: @m-c-c;
-                        color: @a-h-c;
+                        background-color: @menu-checked-background-color;
+                        color: #666;
                         cursor:pointer;
                     }
                     .lines-item{
                     }
-                    .line-icon{
-                        color: @f-c;
+                    .lines-item-icon{
                         float: right;
+                    }
+                    .line-icon{
+//                        color: @font-color;
+//                        float: right;
                         cursor:default;
-                        &:hover{
-//                            background-color: @m-c-c;
-                            color: @a-h-c;
-//                            cursor:pointer;
-                        }
+                        padding-left: 10px;
+//                        &:hover{
+////                            background-color: @menu-checked-background-color;
+//                            color: @a-hover-color;
+////                            cursor:pointer;
+//                        }
                     }
                 }
             }
@@ -229,8 +251,8 @@
 //底部样式
 .bottom {
     min-height: 70px;
-    background-color: @buttom-c;
-    border-top: solid @o-b-c 1px;
+    background-color: @buttom-background-color;
+    border-top: solid @out-border-color 1px;
 }
 
 //=================== bottom end ===================

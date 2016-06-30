@@ -14,22 +14,41 @@
     <div class="auto-lines-container">
         <div class="col-md-4 auto-line-box">
             <dl>
-                <dt>公司信息</dt>
+                <dt>
+                    <labal class="lines-title-item">公司信息</labal>
+                    <div class="lines-item-icon">
+                        <i class="icon icon-tianjia line-icon icon-primary" data-toggle="icon-tag" data-placement="bottom" title="添加" data-modal="addFgs"></i>
+                    </div>
+                </dt>
                 <dd data-refresh-item="sales">
                     <labal class="lines-item">江苏绿能宝融资租赁有限公司</labal>
-                    <i class="icon icon-xiangqing line-icon"></i>
+                    <div class="lines-item-icon">
+                        <i class="icon icon-xiangqing line-icon icon-primary" data-toggle="icon-tag" data-placement="bottom" title="详情"></i>
+                        <i class="icon icon-shanchu line-icon icon-caution" data-toggle="icon-tag" data-placement="bottom" title="删除"></i>
+                    </div>
                 </dd>
                 <dd data-refresh-item="sales">
                     <labal class="lines-item">江苏绿能宝融资租赁有限公司</labal>
-                    <i class="icon icon-xiangqing line-icon"></i>
+                    <div class="lines-item-icon">
+                        <i class="icon icon-xiangqing line-icon icon-primary" data-toggle="icon-tag" data-placement="bottom" title="详情"></i>
+                        <i class="icon icon-shanchu line-icon icon-caution" data-toggle="icon-tag" data-placement="bottom" title="删除"></i>
+                    </div>
                 </dd>
                 <dd data-refresh-item="sales">
                     <labal class="lines-item">江苏绿能宝融资租赁有限公司</labal>
-                    <i class="icon icon-xiangqing line-icon"></i>
+                    <!--                    <i class="icon icon-xiangqing line-icon icon-primary"></i>-->
+                    <div class="lines-item-icon">
+                        <i class="icon icon-xiangqing line-icon icon-primary" data-toggle="icon-tag" data-placement="bottom" title="详情"></i>
+                        <i class="icon icon-shanchu line-icon icon-caution" data-toggle="icon-tag" data-placement="bottom" title="删除"></i>
+                    </div>
                 </dd>
                 <dd data-refresh-item="sales">
                     <labal class="lines-item">江苏绿能宝融资租赁有限公司</labal>
-                    <i class="icon icon-xiangqing line-icon"></i>
+                    <!--                    <i class="icon icon-xiangqing line-icon icon-primary"></i>-->
+                    <div class="lines-item-icon">
+                        <i class="icon icon-xiangqing line-icon icon-primary" data-toggle="icon-tag" data-placement="bottom" title="详情"></i>
+                        <i class="icon icon-shanchu line-icon icon-caution" data-toggle="icon-tag" data-placement="bottom" title="删除"></i>
+                    </div>
                 </dd>
 
             </dl>
@@ -46,9 +65,69 @@
         </div>
     </div>
 
+
+
+    <!--    模态框开始-->
+    <div class="modal fade" id="addFgsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">添加分公司</h4>
+                </div>
+                <div class="modal-body">
+                    <!--                   填写信息的块状输入 +++++++开始-->
+                    <div class="row form-input-box">
+                        <div class="col-md-2 input-lable-box">
+                            <lable class="input-lable">公司名称</lable>
+                        </div>
+                        <div class="col-md-9 input-input-box">
+                            <input type="text" class="form-control input-input" />
+                        </div>
+                        <div class="col-md-9 col-md-offset-2 input-msg-box">
+                            <span class="input-msg">
+                                这是提示信息
+                            </span>
+                        </div>
+                    </div>
+                    <!--                   填写信息的块状输入 +++++++结束-->
+                    <div class="row form-input-box">
+                        <div class="col-md-2 input-lable-box">
+                            <lable class="input-lable">公司名称</lable>
+                        </div>
+                        <div class="col-md-9 input-input-box">
+                            <input type="text" class="form-control input-input" />
+                        </div>
+                        <div class="col-md-9 col-md-offset-2 input-msg-box">
+                            <span class="input-msg">
+<!--                                这是提示信息-->
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row form-input-box">
+                        <div class="col-md-2 input-lable-box">
+                            <lable class="input-lable">公司名称</lable>
+                        </div>
+                        <div class="col-md-9 input-input-box">
+                            <input type="text" class="form-control input-input" />
+                        </div>
+                        <div class="col-md-9 col-md-offset-2 input-msg-box">
+                            <span class="input-msg">这是提示信息</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button button-primary button-small modal-button">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--*************模态框结束*************-->
+
     <!--    时间选择器/提示标签的js-->
     <script type="text/javascript" src="../js/util.js"></script>
-
 </body>
 
 </html>

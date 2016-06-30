@@ -48,6 +48,20 @@ div{
     padding-left: 0px;
     padding-right: 0px;
 }
+
+//去除模态框圆角样式
+.modal-content{
+    border-radius: 0px;
+}
+//调整模态框距离头部的位置
+.modal-dialog{
+    margin: 120px auto;
+}
+//重置抬头的字体大小及粗细程度
+.modal-title{
+    font-size: 16px;
+    font-weight: 400;
+}
 /**********************重写bootstrap end*******************************/
 
 
@@ -80,23 +94,23 @@ div{
 .none-a{
     a{
         text-decoration: none;
-        color: @f-c;
+        color: @font-color;
     }
     a:hover{
         text-decoration: none;
-        color: @f-c;
+        color: @font-color;
     }
     a:linke{
         text-decoration: none;
-        color: @f-c;
+        color: @font-color;
     }
     a:active{
         text-decoration: none;
-        color: @f-c;
+        color: @font-color;
     }
     a:visited{
         text-decoration: none;
-        color: @f-c;
+        color: @font-color;
     }
 }
 // 定义过度效果的样式
@@ -122,10 +136,45 @@ td{
 
 //body start
 body{
-    background-color: @b-c;
+    background-color: @base-background-color;
     font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
-    color: @f-c;
+    color: @font-color;
+}
+
+//<div class="row form-input-box">
+//    <div class="col-md-2 input-lable-box">
+//        <lable class="input-lable">公司名称</lable>
+//    </div>
+//    <div class="col-md-9 input-input-box">
+//        <input type="text" class="form-control input-input" />
+//    </div>
+//    <div class="col-md-12 input-msg-box">
+//        <span class="input-msg">这是提示信息</span>
+//    </div>
+//</div>
+
+//设置模特框中的表单样式开始
+.form-input-box{
+    padding-bottom: 10px;
+    .input-lable-box{
+        text-align: right;
+        .input-lable{
+//            line-height: 34px;
+            padding: 6px 12px;
+            display: block;
+        }
+    }
+    .input-msg-box{
+        padding-top: 5px;
+        min-height: 20px;
+        color: @input-error-msg-color;
+    }
+}
+.modal-button{
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
 }
 /**********************全局样式设定 end*******************************/

@@ -21,6 +21,9 @@
     <link href="../css/base.less" rel="stylesheet/less" type="text/css">
 
 
+<!--    <link href="../css/roles.less" rel="stylesheet/less" type="text/css">-->
+
+
     <!--    <script src="../lib/chart/dist/Chart.min.js"></script>-->
     <script src="../lib/js/echarts.min.js"></script>
 
@@ -37,14 +40,21 @@
                 </a>
             </div>
             <div class="users">
-                <p class="user-name">张铁锤</p>
-                <p class="login-time">
-                    2016-04-28
-                </p>
+                <div class="top-user-lable">
+                    <p>用户名:</p>
+                    <p>登陆时间:</p>
+                </div>
+                <div class="top-user-info">
+                    <p class="user-name">张铁锤</p>
+                    <p class="login-time">
+                        2016-04-28 32:12:12
+                    </p>
+                </div>
             </div>
         </div>
     </div>
     <!--    =============== top end ===============-->
+    
     <!--    中间部分样式开始-->
     <div class="body col-md-11">
         <!--       中间,左侧菜单样式-->
@@ -69,6 +79,12 @@
                     </a>
                 </dd>
                 <dd class="item">
+                    <a href="javascript:void(0)" class="item-a" data-refresh-page="roles">
+                        <i class="icon icon-juese item-icon"></i>
+                        角色管理
+                    </a>
+                </dd>
+                <dd class="item">
                     <a href="javascript:void(0)" class="item-a">
                         <i class="icon icon-kehu item-icon"></i>
                         客户管理
@@ -89,7 +105,7 @@
     </div>
     <!--    =============== body end ===============-->
     <!--    底部样式开始-->
-<!--    <div class="bottom"></div>-->
+        <div class="bottom col-md-12"></div>
 
 
     <!--    jquery框架js文件引入-->
@@ -98,16 +114,16 @@
     <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
     <!--    bootstrap时间选择区文件引入-->
     <script type="text/javascript" src="../lib/js/bootstrap-datepicker.min.js"></script>
-<!--    时间选择器的国际化,js设置-->
+    <!--    时间选择器的国际化,js设置-->
     <script type="text/javascript" src="../lib/js/bootstrap-datepicker-zh.js"></script>
-<!--    <script type="text/javascript" src="../lib/js/bootstrap-datetimepicker.zh-CN.js"></script>-->
+    <!--    <script type="text/javascript" src="../lib/js/bootstrap-datetimepicker.zh-CN.js"></script>-->
     <!--    less解析的js文件引入-->
     <script type="text/javascript" src="../lib/js/less.min.js"></script>
     <!--    主页面或全局中交互的js文件引入-->
     <script type="text/javascript" src="../js/base.js"></script>
     <!--    用来测试前端样式及测试交互的js文件引入-->
     <script type="text/javascript" src="../js/demo.js"></script>
-    
+
 </body>
 
 </html>
