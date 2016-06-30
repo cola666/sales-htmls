@@ -25,6 +25,14 @@ $(function() {
     //销售管理中,从分公司加载销售信息的监听事件
     $(document).on("click", "[data-refresh-item='sales']", function() {
         demo.addHtml('./sales_sales.html', 'sales-sales-box');
+        
+        //获取分公司的id和名称
+        var gfsId = $(this).data("fgs-value-id");
+        var gfsName = $(this).data("fgs-value-name");
+        
+        //设置分公司id和名称到销售的添加按钮
+        $("#xs_add_icon").data("fgs-value-id",gfsId);
+        $("#xs_add_icon").data("fgs-value-name",gfsName);
     });
 
     //销售管理中,从销售加载代理人信息的监听事件
@@ -40,8 +48,19 @@ $(function() {
     
      //销售管理页面,打开添加销售员模态框的监听事件
     $(document).on('click', '[data-modal="addsale"]', function() {
+        var gfsId = $(this).data("fgs-value-id");
+        var gfsName = $(this).data("fgs-value-name");
+        
+        $("#add_xs_modal_fgs_name").val(gfsName);
+        $("#add_xs_modal_fgs_id").val(gfsId);
+        
         //console.log('aaaaaaaaaaaaaaaa');
         $('#addsales').modal('toggle');
+        
+        
+        
+//        console.log(gfsId);
+//        console.log(gfsName);
     });
 
     
