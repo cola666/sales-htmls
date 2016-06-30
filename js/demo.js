@@ -38,6 +38,12 @@ $(function() {
     //销售管理中,从销售加载代理人信息的监听事件
     $(document).on("click", "[data-refresh-item='act']", function() {
         demo.addHtml('./sales_act.html', 'sales-act-box');
+        //获取销售员的id和名称
+        var xsId = $(this).data("xs-value-id");             //data-refresh-item="act" data-xs-value-                                                                         id="1" data-xs-value-name="王铁锤"
+        var xsName = $(this).data("xs-value-name");
+        //将xsId,xsName的值存储在添加按钮里
+        $("#dl_add_icon").data("xs-value-id",xsId);
+        $("#dl_add_icon").data("xs-value-name",xsName);
     });
     
     //销售管理页面,打开添加分公司模态框的监听事件
@@ -53,10 +59,8 @@ $(function() {
         
         $("#add_xs_modal_fgs_name").val(gfsName);
         $("#add_xs_modal_fgs_id").val(gfsId);
-        
         //console.log('aaaaaaaaaaaaaaaa');
         $('#addsales').modal('toggle');
-        
         
         
 //        console.log(gfsId);
@@ -67,7 +71,14 @@ $(function() {
     
      //销售管理页面,打开添加代理人模态框的监听事件
     $(document).on('click', '[data-modal="adddlr"]', function() {
-       // console.log('aaaaaaaaaaaaaaaa');
+        //获取添加按钮里的值
+        var xsId = $(this).data("xs-value-id");
+        var xsName = $(this).data("xs-value-name");
+        //存储xsname和xsid
+         console.log('aaaaaaaaaaaaaaaa');
+        $("#add-dl-model-xs-name").val(xsName);
+        $("#add-dl-model-xs-id").val(xsId);
+        // console.log('aaaaaaaaaaaaaaaa');
         $('#adddlr').modal('toggle');
     });
     
