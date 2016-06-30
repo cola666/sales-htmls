@@ -36,7 +36,29 @@ $(function() {
     $(document).on('click', '[data-modal="addFgs"]', function() {
         $('#addFgsModal').modal('toggle');
     });
+    
+    
+     //销售管理页面,打开添加销售员模态框的监听事件
+    $(document).on('click', '[data-modal="addsale"]', function() {
+        //console.log('aaaaaaaaaaaaaaaa');
+        $('#addsales').modal('toggle');
+    });
 
+    
+    
+     //销售管理页面,打开添加代理人模态框的监听事件
+    $(document).on('click', '[data-modal="adddlr"]', function() {
+        console.log('aaaaaaaaaaaaaaaa');
+        $('#adddlr').modal('toggle');
+    });
+    
+    
+    
+    
+    
+    
+    
+    
     //角色管理中,为分公司加载其下销售的方法
     $(document).on("click","[data-refresh-item='fgs']",function(){
         $(this).nextAll(".users-role-inner-dl").first().html('<dd><i class="icon icon-sanjiaoyou users-item-i" data-refresh-item="xs"></i><a>张铁蛋</a><dl class="users-role-inner-dl"></dd><dd><i class="icon icon-sanjiaoyou users-item-i" data-refresh-item="xs"></i><a>张铁蛋1</a><dl class="users-role-inner-dl"></dd>')
