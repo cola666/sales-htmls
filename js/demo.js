@@ -48,7 +48,7 @@ $(function() {
     
      //销售管理页面,打开添加代理人模态框的监听事件
     $(document).on('click', '[data-modal="adddlr"]', function() {
-        console.log('aaaaaaaaaaaaaaaa');
+       // console.log('aaaaaaaaaaaaaaaa');
         $('#adddlr').modal('toggle');
     });
     
