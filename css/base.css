@@ -187,6 +187,10 @@ body {
   min-height: 20px;
   color: #ff7680;
 }
+.form-input-box .remove-lable-box .input-lable {
+  padding: 6px 12px;
+  display: block;
+}
 .modal-button {
   font-size: 14px;
   height: 34px;
@@ -227,14 +231,24 @@ body {
 .users-role-container .users-role-box .lines-item-icon {
   float: right;
 }
+.users-role-container .users-role-box a {
+  cursor: pointer;
+}
+.users-role-container .users-role-box .i-user-checked {
+  color: #179afc;
+}
 .users-role-container .user-roles-box dl {
   border-left: 0px;
 }
 .users-role-container .user-roles-box dd .lines-item-icon {
   padding-right: 10px;
+  margin-top: -30px;
 }
 .users-role-container .user-roles-box dd .lines-item-icon .line-icon {
   padding-right: 5px;
+}
+.users-role-container .user-roles-box .i-role-checked {
+  color: #179afc;
 }
 .users-role-container dl {
   border: solid #e7e7eb 1px;
@@ -349,7 +363,7 @@ body {
 }
 .top-container .users {
   height: 65px;
-  width: 230px;
+  width: 280px;
   float: right;
   padding-top: 12px;
 }
