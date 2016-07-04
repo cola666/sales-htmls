@@ -1,3 +1,6 @@
+/*
+ * 用于处理确认对话框的js文件
+ */
 var ibootbox = new Object();
 
 ibootbox.confirmCode = 404;
@@ -29,9 +32,7 @@ $(function() {
     //这只是一个调用的例子
     //真实使用时不一定要这样写
     
-    
     //ibootbox.confirm(options,callBack);
-    
     
     $(document).on("click", '[data-modal="remove"]', function() {
         //执行自定义的删除确认对话框

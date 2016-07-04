@@ -181,81 +181,21 @@
     <script type="text/javascript" src="../lib/jquery_validation/localization/messages_zh.min.js"></script>
 
     <!--    基于bootstrap对弹出框,确认对话框的重写-->
-    <!--    less解析的js文件引入-->
-    <script type="text/javascript" src="../lib/js/less.min.js"></script>
     <!--    主页面或全局中交互的js文件引入-->
     <script type="text/javascript" src="../js/base.js"></script>
+    <script type="text/javascript" src="../js/valid.js"></script>
 
+    <!--    less解析的js文件引入-->
+    <script type="text/javascript" src="../lib/js/less.min.js"></script>
     <!--    用来测试前端样式及测试交互的js文件引入-->
     <script type="text/javascript" src="../js/demo.js"></script>
 
     <script type="text/javascript">
-        $().ready(function() {
-            $("#test_validation").validate({
-                submitHandler: function(form) {
-//                    console.log(form);
-                    abc("abc");
-                },
-                errorPlacement:function(error,element) {
-                    console.log(error);
-                    console.log(element);
-                    error.appendTo(element.parent("td").next("td"));
-//                    if (element.attr("name") == "fname" || element.attr("name") == "lname")   
-//                        error.insertAfter("#lastname");
-//                    else    
-//                        error.insertAfter(element);
-                },
-                rules: {
-                    firstname: "required",
-                    lastname: "required",
-                    username: {
-                        required: true,
-                        minlength: 2
-                    },
-                    password: {
-                        required: true,
-                        minlength: 5
-                    },
-                    confirm_password: {
-                        required: true,
-                        minlength: 5,
-                        equalTo: "#password"
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    topic: {
-                        required: "#newsletter:checked",
-                        minlength: 2
-                    },
-                    agree: "required"
-                },
-                messages: {
-                    firstname: "请输入您的名字",
-                    lastname: "请输入您的姓氏",
-                    username: {
-                        required: "请输入用户名",
-                        minlength: "用户名必需由两个字母组成"
-                    },
-                    password: {
-                        required: "请输入密码",
-                        minlength: "密码长度不能小于 5 个字母"
-                    },
-                    confirm_password: {
-                        required: "请输入密码",
-                        minlength: "密码长度不能小于 5 个字母",
-                        equalTo: "两次密码输入不一致"
-                    },
-                    email: "请输入一个正确的邮箱",
-                    agree: "请接受我们的声明",
-                    topic: "请选择两个主题"
-                }
-            });
-        });
-
-        function abc() {
-            console.log("abc");
+        $(function(){
+            ivalid.base("test_validation",aa);
+        })
+        function aa(){
+            console.log("aa");
         }
     </script>
 </body>

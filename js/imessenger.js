@@ -1,3 +1,7 @@
+/*
+ * 用于封装提示框的js文件
+ */
+
 var imessenger = new Object();
 $(function() {
      //设置Messenger相应的参数
