@@ -19,10 +19,6 @@
 
     <!--    阿里不图标的css文件引入-->
     <link href="../lib/iconfont/iconfont.css" rel="stylesheet" type="text/css">
-    
-<!--    验证插件的css引入-->
-    <link href="../lib/validform/css/style.css" rel="stylesheet" type="text/css">
-
 
     <!--    base页面的样式-->
     <link href="../css/base.less" rel="stylesheet/less" type="text/css">
@@ -100,38 +96,34 @@
         <!--        中间右侧主显示区域样式开始-->
         <div class="main col-md-10" id="main">
             <div class="main-container" data-form-valid="valid" id="main-container">
-                
-<!--                这是修改后的样子-->
-                <div class="row form-input-box">
-                    <div class="col-md-2 input-lable-box">
-                        <lable class="input-lable">用户名</lable>
+                <form id="test_validation" action="">
+                    <!--                这是修改后的样子-->
+                    <div class="row form-input-box">
+                        <div class="col-md-2 input-lable-box">
+                            <lable class="input-lable" for="firstname">用户名</lable>
+                        </div>
+                        <div class="col-md-9 input-input-box">
+                            <input name="firstname" type="text" class="form-control input-input" />
+                            <span class="input-msg-box">
+                                <label for="firstname" class="error input-error-msg"></label>
+                            </span>
+                        </div>
                     </div>
-                    <div class="col-md-9 input-input-box">
-                        <input type="text" class="form-control input-input" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！"/>
+
+                    <!--                这是输入块原来的样子-->
+                    <div class="row form-input-box">
+                        <div class="col-md-2 input-lable-box">
+                            <lable class="input-lable">密码</lable>
+                        </div>
+                        <div class="col-md-9 input-input-box">
+                            <input name="password" type="text" class="form-control input-input"/>
+                            <span class="input-msg-box">
+                                <label for="password" class="error input-error-msg"></label>
+                            </span>
+                        </div>
                     </div>
-<!--
-                    <div class="col-md-9 col-md-offset-2 input-msg-box">
-                        <span class="input-msg">
-                            这是提示信息
-                        </span>
-                    </div>
--->
-                </div>
-                
-<!--                这是输入块原来的样子-->
-                <div class="row form-input-box">
-                    <div class="col-md-2 input-lable-box">
-                        <lable class="input-lable">用户名</lable>
-                    </div>
-                    <div class="col-md-9 input-input-box">
-                        <input type="text" class="form-control input-input" />
-                    </div>
-                    <div class="col-md-9 col-md-offset-2 input-msg-box">
-                        <span class="input-msg">
-                            这是提示信息
-                        </span>
-                    </div>
-                </div>
+                    <input type="submit" class="button button-primary" value="提交" />
+                </form>
             </div>
         </div>
         <!--        =============== main end ===============-->
@@ -176,32 +168,95 @@
     <script type="text/javascript" src="../lib/js/bootstrap-datepicker.min.js"></script>
     <!--    时间选择器的国际化,js设置-->
     <script type="text/javascript" src="../lib/js/bootstrap-datepicker-zh.js"></script>
-    
+
     <!--    警告框的js文件-->
     <script type="text/javascript" src="../lib/messenger/js/messenger.min.js"></script>
     <script type="text/javascript" src="../js/imessenger.js"></script>
-    
+
     <!--    删除模态框的激活js-->
     <script type="text/javascript" src="../js/ibootbox.js"></script>
-    
-<!--    表单验证的插件-->
-    <script type="text/javascript" src="../lib/validform/js/Validform_v5.3.2_min.js"></script>
-<!--    <script type="text/javascript" src="../lib/validform/Validform_v5.3.2_min.js"></script>-->
+
+    <!--    表单验证的插件-->
+    <script type="text/javascript" src="../lib/jquery_validation/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery_validation/localization/messages_zh.min.js"></script>
+
     <!--    基于bootstrap对弹出框,确认对话框的重写-->
     <!--    less解析的js文件引入-->
     <script type="text/javascript" src="../lib/js/less.min.js"></script>
     <!--    主页面或全局中交互的js文件引入-->
     <script type="text/javascript" src="../js/base.js"></script>
-<!--    用于表单验证的js文件-->
-<!--    <script type="text/javascript" src="../js/valid.js"></script>-->
-    
+
     <!--    用来测试前端样式及测试交互的js文件引入-->
     <script type="text/javascript" src="../js/demo.js"></script>
 
     <script type="text/javascript">
-        $(function(){
+        $().ready(function() {
+            $("#test_validation").validate({
+                submitHandler: function(form) {
+//                    console.log(form);
+                    abc("abc");
+                },
+                errorPlacement:function(error,element) {
+                    console.log(error);
+                    console.log(element);
+                    error.appendTo(element.parent("td").next("td"));
+//                    if (element.attr("name") == "fname" || element.attr("name") == "lname")   
+//                        error.insertAfter("#lastname");
+//                    else    
+//                        error.insertAfter(element);
+                },
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    username: {
+                        required: true,
+                        minlength: 2
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    confirm_password: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password"
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    topic: {
+                        required: "#newsletter:checked",
+                        minlength: 2
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    firstname: "请输入您的名字",
+                    lastname: "请输入您的姓氏",
+                    username: {
+                        required: "请输入用户名",
+                        minlength: "用户名必需由两个字母组成"
+                    },
+                    password: {
+                        required: "请输入密码",
+                        minlength: "密码长度不能小于 5 个字母"
+                    },
+                    confirm_password: {
+                        required: "请输入密码",
+                        minlength: "密码长度不能小于 5 个字母",
+                        equalTo: "两次密码输入不一致"
+                    },
+                    email: "请输入一个正确的邮箱",
+                    agree: "请接受我们的声明",
+                    topic: "请选择两个主题"
+                }
+            });
+        });
 
-        })
+        function abc() {
+            console.log("abc");
+        }
     </script>
 </body>
 

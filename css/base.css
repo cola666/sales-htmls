@@ -184,8 +184,13 @@ body {
 }
 .form-input-box .input-msg-box {
   padding-top: 5px;
-  min-height: 20px;
+  min-height: 25px;
   color: #ff7680;
+  display: block;
+}
+.form-input-box .input-msg-box .input-error-msg {
+  margin-bottom: 0px;
+  font-weight: 400;
 }
 .form-input-box .remove-lable-box .input-lable {
   padding: 6px 12px;
