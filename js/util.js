@@ -97,4 +97,3 @@ $(document).ready(function() {
 $(function () {
   $('[data-toggle="icon-tag"]').tooltip()
 });
-

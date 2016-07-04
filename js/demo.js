@@ -15,11 +15,19 @@ $(function() {
     //    加载销售管理页面的监听事件
     $(document).on("click", "[data-refresh-page='sales']", function() {
         demo.addHtml('./sales.html', 'main-container');
+        $('#alert_demo').alert();
     });
 
     //    加载角色页面的监听事件
     $(document).on("click", "[data-refresh-page='roles']", function() {
         demo.addHtml('./roles.html', 'main-container');
+    });
+    
+    //    加载客户页面的监听事件
+    $(document).on("click", "[data-refresh-page='kehu']", function() {
+        imessenger.error("我想要提示的错误信息");
+//        imessenger.success("success message");
+//        imessenger.info("info message");
     });
 
     //销售管理中,从分公司加载销售信息的监听事件

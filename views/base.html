@@ -12,17 +12,20 @@
     <link href="../lib/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
     <!--    bootstrap中button的样式-->
     <link href="../lib/css/buttons.css" rel="stylesheet" type="text/css">
+
+    <!--    提示框的样式文件-->
+    <link href="../lib/messenger/css/messenger.css" rel="stylesheet" type="text/css">
+    <link href="../lib/messenger/css/messenger-theme-air.css" rel="stylesheet" type="text/css">
+
+    <!--    阿里不图标的css文件引入-->
     <link href="../lib/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    
+<!--    验证插件的css引入-->
+    <link href="../lib/validform/css/style.css" rel="stylesheet" type="text/css">
 
 
-    <!--    用于重写或全局样式定义的样式文件-->
-    <!--    <link href="../css/main.less" rel="stylesheet/less" type="text/css">-->
     <!--    base页面的样式-->
     <link href="../css/base.less" rel="stylesheet/less" type="text/css">
-
-
-<!--    <link href="../css/roles.less" rel="stylesheet/less" type="text/css">-->
-
 
     <!--    <script src="../lib/chart/dist/Chart.min.js"></script>-->
     <script src="../lib/js/echarts.min.js"></script>
@@ -54,7 +57,7 @@
         </div>
     </div>
     <!--    =============== top end ===============-->
-    
+
     <!--    中间部分样式开始-->
     <div class="body col-md-11">
         <!--       中间,左侧菜单样式-->
@@ -85,7 +88,7 @@
                     </a>
                 </dd>
                 <dd class="item">
-                    <a href="javascript:void(0)" class="item-a">
+                    <a href="javascript:void(0)" class="item-a" data-refresh-page="kehu">
                         <i class="icon icon-kehu item-icon"></i>
                         客户管理
                     </a>
@@ -96,33 +99,61 @@
 
         <!--        中间右侧主显示区域样式开始-->
         <div class="main col-md-10" id="main">
-            <div class="main-container" id="main-container">
+            <div class="main-container" data-form-valid="valid" id="main-container">
                 
+<!--                这是修改后的样子-->
+                <div class="row form-input-box">
+                    <div class="col-md-2 input-lable-box">
+                        <lable class="input-lable">用户名</lable>
+                    </div>
+                    <div class="col-md-9 input-input-box">
+                        <input type="text" class="form-control input-input" datatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" />
+                    </div>
+<!--
+                    <div class="col-md-9 col-md-offset-2 input-msg-box">
+                        <span class="input-msg">
+                            这是提示信息
+                        </span>
+                    </div>
+-->
+                </div>
+                
+<!--                这是输入块原来的样子-->
+                <div class="row form-input-box">
+                    <div class="col-md-2 input-lable-box">
+                        <lable class="input-lable">用户名</lable>
+                    </div>
+                    <div class="col-md-9 input-input-box">
+                        <input type="text" class="form-control input-input" />
+                    </div>
+                    <div class="col-md-9 col-md-offset-2 input-msg-box">
+                        <span class="input-msg">
+                            这是提示信息
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
         <!--        =============== main end ===============-->
     </div>
     <!--    =============== body end ===============-->
     <!--    底部样式开始-->
-        <div class="bottom col-md-12"></div>
-        
-        
-        
-    <!--    删除确认模态框开始-->
-    <div class="modal fade bs-example-modal-sm" id="modal_remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+    <div class="bottom col-md-12"></div>
+
+
+
+    <!--删除确认模态框开始-->
+    <div class="modal fade bs-example-modal-sm" id="modal_confirm_remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>-->
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">删除确定</h4>
+                    <h4 class="modal-title" id="myModalLabel">确认框</h4>
                 </div>
-                <input id="remove-confirm-modal-data" class="input-lable hide" value="404" />
                 <div class="modal-body">
-                    <!--                   填写信息的块状输入 +++++++开始-->
+                    <!-- 填写信息的块状输入 +++++++开始-->
                     <div class="row form-input-box">
                         <div class="col-md-12 remove-lable-box">
-                            <lable id="remove-confirm-modal-text" class="input-lable">您是否确定删除XXXX</lable>
+                            <lable data-remove-confirm="modal-text" class="input-lable">您是否确定删除XXXX</lable>
                         </div>
                     </div>
                 </div>
@@ -133,8 +164,8 @@
             </div>
         </div>
     </div>
+    <!--*************删除确认模态框开始*************-->
 
-    <!--*************模态框结束*************-->
 
 
     <!--    jquery框架js文件引入-->
@@ -145,19 +176,33 @@
     <script type="text/javascript" src="../lib/js/bootstrap-datepicker.min.js"></script>
     <!--    时间选择器的国际化,js设置-->
     <script type="text/javascript" src="../lib/js/bootstrap-datepicker-zh.js"></script>
-<!--    基于bootstrap对弹出框,确认对话框的重写-->
-<!--    <script type="text/javascript" src="../lib/js/bootbox.js"></script>-->
-    <!--    <script type="text/javascript" src="../lib/js/bootstrap-datetimepicker.zh-CN.js"></script>-->
+    
+    <!--    警告框的js文件-->
+    <script type="text/javascript" src="../lib/messenger/js/messenger.min.js"></script>
+    <script type="text/javascript" src="../js/imessenger.js"></script>
+    
+    <!--    删除模态框的激活js-->
+    <script type="text/javascript" src="../js/ibootbox.js"></script>
+    
+<!--    表单验证的插件-->
+    <script type="text/javascript" src="../lib/validform/js/Validform_v5.3.2_min.js"></script>
+<!--    <script type="text/javascript" src="../lib/validform/Validform_v5.3.2_min.js"></script>-->
+    <!--    基于bootstrap对弹出框,确认对话框的重写-->
     <!--    less解析的js文件引入-->
     <script type="text/javascript" src="../lib/js/less.min.js"></script>
     <!--    主页面或全局中交互的js文件引入-->
     <script type="text/javascript" src="../js/base.js"></script>
-<!--    删除模态框的激活js-->
-    <script type="text/javascript" src="../js/ibootbox.js"></script>
+<!--    用于表单验证的js文件-->
+    <script type="text/javascript" src="../js/valid.js"></script>
+    
     <!--    用来测试前端样式及测试交互的js文件引入-->
     <script type="text/javascript" src="../js/demo.js"></script>
-    
 
+    <script type="text/javascript">
+        $(function(){
+
+        })
+    </script>
 </body>
 
 </html>
