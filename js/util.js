@@ -97,3 +97,18 @@ $(document).ready(function() {
 $(function () {
   $('[data-toggle="icon-tag"]').tooltip()
 });
+
+
+
+$(function(){
+    var demo=$('[data-form-valid="valid"]').Validform({
+        tiptype:3,
+        label:".label",
+        showAllError:true,
+        btnSubmit:"[data-form-valid='submit']",
+        datatype:{
+            "zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+        },
+        ajaxPost:true
+    });
+})
