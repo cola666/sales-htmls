@@ -26,6 +26,26 @@
 /**
  * 重写bootstrap的样式----开始
  */
+a {
+  text-decoration: none;
+  color: #8d8d8d;
+}
+a:hover {
+  text-decoration: none;
+  color: #8d8d8d;
+}
+a:linke {
+  text-decoration: none;
+  color: #8d8d8d;
+}
+a:active {
+  text-decoration: none;
+  color: #8d8d8d;
+}
+a:visited {
+  text-decoration: none;
+  color: #8d8d8d;
+}
 .input-group-addon {
   border-radius: 0px;
 }
@@ -116,6 +136,14 @@
   font-size: 16px;
   font-weight: 400;
 }
+.nav-tabs.nav-justified > li > a {
+  border-radius: 0px;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  color: #179afc;
+}
 /**********************重写bootstrap end*******************************/
 /**
 *重写buttons样式----开始
@@ -195,6 +223,9 @@ body {
 .form-input-box .remove-lable-box .input-lable {
   padding: 6px 12px;
   display: block;
+}
+.form-input-box .error {
+  border-color: #ff7680;
 }
 .modal-button {
   font-size: 14px;
@@ -532,6 +563,51 @@ body {
 .body .main .auto-lines-container .auto-line-box dd .line-icon {
   cursor: default;
   padding-left: 10px;
+}
+.body .commission-box {
+  margin-top: 40px;
+}
+.body .commission-box .table > tbody > tr.active > td,
+.body .commission-box .table > tbody > tr.active > th,
+.body .commission-box .table > tbody > tr > td.active,
+.body .commission-box .table > tbody > tr > th.active,
+.body .commission-box .table > tfoot > tr.active > td,
+.body .commission-box .table > tfoot > tr.active > th,
+.body .commission-box .table > tfoot > tr > td.active,
+.body .commission-box .table > tfoot > tr > th.active,
+.body .commission-box .table > thead > tr.active > td,
+.body .commission-box .table > thead > tr.active > th,
+.body .commission-box .table > thead > tr > td.active,
+.body .commission-box .table > thead > tr > th.active {
+  text-align: center;
+  vertical-align: middle;
+}
+.body .commission-box .table-bordered > tbody > tr > td,
+.body .commission-box .table-bordered > tbody > tr > th,
+.body .commission-box .table-bordered > tfoot > tr > td,
+.body .commission-box .table-bordered > tfoot > tr > th,
+.body .commission-box .table-bordered > thead > tr > td,
+.body .commission-box .table-bordered > thead > tr > th {
+  text-align: center;
+}
+.body .commission-box .half-input {
+  display: inline-block;
+  width: 40%;
+  margin: 0 5px;
+}
+.body .commission-box .input-oval {
+  border-radius: 17px;
+}
+.body .commission-box .default-input {
+  width: 60%;
+  margin: 0 5px;
+  display: inline-block;
+}
+.body .commission-box .commission-button {
+  text-align: center;
+}
+.body .commission-box table {
+  table-layout: fixed;
 }
 /*
  * 底部样式开始 bottom start

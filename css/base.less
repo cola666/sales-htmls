@@ -91,6 +91,7 @@
     margin-top: 50px;
     margin-bottom: 20px;
     margin-left: 4.17%;
+//    margin-right: 4.17%;
     border: solid @out-border-color 1px;
     //左边菜单和右边主要部分的对齐方式
     .menus, .main{
@@ -241,7 +242,36 @@
     }
     //=================== main end ===================
     
-    
+    //提成率页面的单独样式
+    .commission-box{
+        margin-top: 40px;
+        .table>tbody>tr.active>td, .table>tbody>tr.active>th, .table>tbody>tr>td.active, .table>tbody>tr>th.active, .table>tfoot>tr.active>td, .table>tfoot>tr.active>th, .table>tfoot>tr>td.active, .table>tfoot>tr>th.active, .table>thead>tr.active>td, .table>thead>tr.active>th, .table>thead>tr>td.active, .table>thead>tr>th.active{
+            text-align: center;
+            vertical-align:middle;
+        }
+        .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+            text-align: center;
+        }
+        .half-input{
+            display: inline-block;
+            width: 40%;
+            margin: 0 5px;
+        }
+        .input-oval{
+            border-radius: 17px;
+        }
+        .default-input{
+            width: 60%;
+            margin: 0 5px;
+            display: inline-block;
+        }
+        .commission-button{
+            text-align: center;
+        }
+        table{
+            table-layout:fixed;
+        }
+    }
 }
 
 

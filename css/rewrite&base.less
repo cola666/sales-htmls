@@ -13,6 +13,7 @@ div{
 /**
  * 重写bootstrap的样式----开始
  */
+.none-a;
 //去除输入框的圆角样式
 .input-group-addon{
     border-radius: 0px;
@@ -61,6 +62,14 @@ div{
 .modal-title{
     font-size: 16px;
     font-weight: 400;
+}
+
+//重写bootstrap的标签页样式
+.nav-tabs.nav-justified>li>a{
+    border-radius: 0px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    color: @a-hover-color;
 }
 /**********************重写bootstrap end*******************************/
 

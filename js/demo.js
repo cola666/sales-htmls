@@ -22,6 +22,10 @@ $(function() {
     $(document).on("click", "[data-refresh-page='roles']", function() {
         demo.addHtml('./roles.html', 'main-container');
     });
+    //    加载角色页面的监听事件
+    $(document).on("click", "[data-refresh-page='ticheng']", function() {
+        demo.addHtml('./commission/commission.html', 'main-container');
+    });
     
     //    加载客户页面的监听事件
     $(document).on("click", "[data-refresh-page='kehu']", function() {

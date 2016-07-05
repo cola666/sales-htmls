@@ -84,6 +84,12 @@
                     </a>
                 </dd>
                 <dd class="item">
+                    <a href="javascript:void(0)" class="item-a" data-refresh-page="ticheng">
+                        <i class="icon icon-kehu item-icon"></i>
+                        提成设置
+                    </a>
+                </dd>
+                <dd class="item">
                     <a href="javascript:void(0)" class="item-a" data-refresh-page="kehu">
                         <i class="icon icon-kehu item-icon"></i>
                         客户管理
@@ -96,39 +102,14 @@
         <!--        中间右侧主显示区域样式开始-->
         <div class="main col-md-10" id="main">
             <div class="main-container" data-form-valid="valid" id="main-container">
-                <form id="test_validation" action="">
-                    <!--                这是修改后的样子-->
-                    <div class="row form-input-box">
-                        <div class="col-md-2 input-lable-box">
-                            <lable class="input-lable" for="firstname">用户名</lable>
-                        </div>
-                        <div class="col-md-9 input-input-box">
-                            <input name="firstname" type="text" class="form-control input-input" />
-                            <span class="input-msg-box">
-                                <label for="firstname" class="error input-error-msg"></label>
-                            </span>
-                        </div>
-                    </div>
-
-                    <!--                这是输入块原来的样子-->
-                    <div class="row form-input-box">
-                        <div class="col-md-2 input-lable-box">
-                            <lable class="input-lable">密码</lable>
-                        </div>
-                        <div class="col-md-9 input-input-box">
-                            <input name="password" type="text" class="form-control input-input"/>
-                            <span class="input-msg-box">
-                                <label for="password" class="error input-error-msg"></label>
-                            </span>
-                        </div>
-                    </div>
-                    <input type="submit" class="button button-primary" value="提交" />
-                </form>
+                
             </div>
         </div>
         <!--        =============== main end ===============-->
     </div>
     <!--    =============== body end ===============-->
+
+
     <!--    底部样式开始-->
     <div class="bottom col-md-12"></div>
 
@@ -183,7 +164,7 @@
     <!--    基于bootstrap对弹出框,确认对话框的重写-->
     <!--    主页面或全局中交互的js文件引入-->
     <script type="text/javascript" src="../js/base.js"></script>
-    <script type="text/javascript" src="../js/valid.js"></script>
+    <script type="text/javascript" src="../js/ivalid.js"></script>
 
     <!--    less解析的js文件引入-->
     <script type="text/javascript" src="../lib/js/less.min.js"></script>
@@ -191,10 +172,11 @@
     <script type="text/javascript" src="../js/demo.js"></script>
 
     <script type="text/javascript">
-        $(function(){
-            ivalid.base("test_validation",aa);
+        $(function() {
+            ivalid.base("test_validation", aa);
         })
-        function aa(){
+
+        function aa() {
             console.log("aa");
         }
     </script>
