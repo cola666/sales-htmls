@@ -18,5 +18,16 @@ $(function(){
             $(ele).removeClass("page-checked-a");
         })
         $(this).addClass("page-checked-a");
+    });
+    
+//    销售提成页面,切换标签的效果
+    $(document).on("click", "#commission-nav-box li", function() {
+        var navUl = $(this).parents("#commission-nav-box").first();
+//        console.log(navUl.first());
+        navUl.find("li").each(function(index, ele) {
+//            console.log(ele);
+            $(ele).removeClass("active");
+        });
+        $(this).addClass("active");
     })
 })

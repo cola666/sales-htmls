@@ -9,14 +9,18 @@
 
 <body>
     <div class="row">
-        <ul class="nav nav-tabs nav-justified">
-            <li role="presentation" class="active"><a href="javascript:void(0)">总公司</a>
+        <ul class="nav nav-tabs nav-justified" id="commission-nav-box">
+            <li role="presentation" class="active" data-commission-nav="zgs">
+                <a href="javascript:void(0)">总公司</a>
             </li>
-            <li role="presentation"><a href="javascript:void(0)">分公司</a>
+            <li role="presentation" data-commission-nav="fgs">
+                <a href="javascript:void(0)">分公司</a>
             </li>
-            <li role="presentation"><a href="javascript:void(0)">销售人员</a>
+            <li role="presentation" data-commission-nav="xs">
+                <a href="javascript:void(0)">销售人员</a>
             </li>
-            <li role="presentation"><a href="javascript:void(0)">代理人</a>
+            <li role="presentation" data-commission-nav="dlr">
+                <a href="javascript:void(0)">代理人</a>
             </li>
         </ul>
     </div>
@@ -24,8 +28,23 @@
 
     </div>
     <script type="text/javascript">
-        $(function(){
-            demo.addHtml('./commission/commission_zgs.html', 'commission-box');
+        $(function() {
+//            demo.addHtml('./commission/commission_zgs.html', 'commission-box');
+            
+            $(document).on("click",'[data-commission-nav="zgs"]',function(){
+                demo.addHtml('./commission/commission_zgs.html', 'commission-box');
+            });
+            $(document).on("click",'[data-commission-nav="fgs"]',function(){
+                demo.addHtml('./commission/commission_fgs.html', 'commission-box');
+            });
+            $(document).on("click",'[data-commission-nav="xs"]',function(){
+                demo.addHtml('./commission/commission_xs.html', 'commission-box');
+            });
+            $(document).on("click",'[data-commission-nav="dlr"]',function(){
+                demo.addHtml('./commission/commission_dlr.html', 'commission-box');
+            });
+            
+            
         });
     </script>
 </body>
