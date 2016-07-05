@@ -8,49 +8,55 @@
 </head>
 
 <body>
-    <table class="table table-bordered table-hover">
-        <!--
-        <tr class="active">
-            <th colspan="4">负责人提成</th>
-            <th colspan="2">内勤提成</th>
-        </tr>
--->
-        <!--
-        <tr class="active">
-            <th colspan="2">总公司业绩</th>
-            <th colspan="2">代理人总业绩</th>
-            <th rowspan="2">业绩区间(万元)</th>
-            <th rowspan="2">提成率(%)</th>
-        </tr>
--->
-        <tr class="active">
-            <th>业绩区间(万元)</th>
-            <th>总提成率(%)</th>
-            <th>代理人提成率(%)</th>
-            <th>销售提成率(%)</th>
-        </tr>
-        <tr>
-            <td>
-                <input type="text" class="form-control half-input" placeholder="起始值(含)" readonly />--
-                <input type="text" class="form-control half-input input-oval" placeholder="结束值(不含)" readonly />
-            </td>
-            <td>
-                <!--               这是用来存储相关隐藏id的输入框-->
-                <input type="text" class="hide" placeholder="隐藏id">
-                <input type="text" class="form-control default-input" placeholder="总业绩提成率" value="1.2" readonly />
-            </td>
-            <td>
-                <!--               这是用来存储相关隐藏id的输入框-->
-                <input type="text" class="hide" placeholder="隐藏id">
-                <input type="text" class="form-control default-input" placeholder="代理人业绩提成率" value="1.2" readonly />
-            </td>
-            <td>
-                <!--               这是用来存储相关隐藏id的输入框-->
-                <input type="text" class="hide" placeholder="隐藏id">
-                <input type="text" class="form-control default-input" placeholder="代理人业绩提成率" value="1.2" readonly />
-            </td>
-        </tr>
-    </table>
+    <div class="col-md-3 auto-lines-container">
+        <div class="auto-line-box">
+            <dl>
+                <dt>代理人</dt>
+                <dd class="comminssion-dlr-checked">代理人1</dd>
+                <dd>代理人1</dd>
+                <dd>代理人1</dd>
+                <dd>代理人1</dd>
+                <dd>代理人1</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="col-md-9 comminssion-dlr-table-box">
+
+        <table class="table table-bordered table-hover">
+            <tr class="active">
+                <th>业绩区间(万元)</th>
+                <th>总提成率(%)</th>
+                <th>代理人提成率(%)</th>
+                <th>销售提成率(%)</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control half-input" placeholder="起始值(含)" readonly />--
+                    <input type="text" class="form-control half-input input-oval" placeholder="结束值(不含)" readonly />
+                </td>
+                <td>
+                    <!--               这是用来存储相关隐藏id的输入框-->
+                    <input type="text" class="hide" placeholder="隐藏id">
+                    <input type="text" class="form-control default-input" placeholder="总业绩提成率" value="1.2" readonly />
+                </td>
+                <td>
+                    <!--               这是用来存储相关隐藏id的输入框-->
+                    <input type="text" class="hide" placeholder="隐藏id">
+                    <input type="text" class="form-control default-input" placeholder="代理人业绩提成率" value="1.2" readonly />
+                </td>
+                <td>
+                    <!--               这是用来存储相关隐藏id的输入框-->
+                    <input type="text" class="hide" placeholder="隐藏id">
+                    <input type="text" class="form-control default-input" placeholder="代理人业绩提成率" value="1.2" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <i class="icon icon-tianjia icon-primary"></i>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>

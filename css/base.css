@@ -609,6 +609,12 @@ body {
 .body .commission-box table {
   table-layout: fixed;
 }
+.body .commission-box .comminssion-dlr-table-box {
+  padding-left: 10px;
+}
+.body .commission-box .comminssion-dlr-checked {
+  color: #179afc;
+}
 /*
  * 底部样式开始 bottom start
  */
