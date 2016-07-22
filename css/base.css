@@ -590,6 +590,9 @@ body {
 .body .commission-box .table-bordered > thead > tr > th {
   text-align: center;
 }
+.body .commission-box .form-control {
+  padding: 6px 6px;
+}
 .body .commission-box .half-input {
   display: inline-block;
   width: 40%;
@@ -613,6 +616,9 @@ body {
   padding-left: 10px;
 }
 .body .commission-box .comminssion-dlr-checked {
+  color: #179afc;
+}
+.body .commission-box .comminssion-dlr-checked:hover {
   color: #179afc;
 }
 /*
