@@ -34,6 +34,37 @@ $(function() {
 //        imessenger.info("info message");
     });
 
+    //加载离职人员客户分配页面的监听事件
+    $(document).on("click", "[data-refresh-page='lizhi']", function() {
+        demo.addHtml('./fgs_sales.html', 'main-container');
+    });
+    
+    //通过分公司加载其离职的销售
+     $(document).on("click", "[data-refresh-item='fgs_sales']", function() {
+        demo.addHtml('./lizhirenyuan.html', 'fgs-sales-box');
+        
+        //获取分公司的id和名称
+//        var gfsId = $(this).data("fgs-value-id");
+//        var gfsName = $(this).data("fgs-value-name");
+//        
+//        //设置分公司id和名称到销售的添加按钮
+//        $("#xs_add_icon").data("fgs-value-id",gfsId);
+//        $("#xs_add_icon").data("fgs-value-name",gfsName);
+    });
+    
+    //通过离职销售加载其负责的客户
+     $(document).on("click", "[data-refresh-item='customer']", function() {
+        demo.addHtml('./lizhi_customer.html', 'sales-customer-box');
+        
+        //获取分公司的id和名称
+//        var gfsId = $(this).data("fgs-value-id");
+//        var gfsName = $(this).data("fgs-value-name");
+//        
+//        //设置分公司id和名称到销售的添加按钮
+//        $("#xs_add_icon").data("fgs-value-id",gfsId);
+//        $("#xs_add_icon").data("fgs-value-name",gfsName);
+    });
+
     //销售管理中,从分公司加载销售信息的监听事件
     $(document).on("click", "[data-refresh-item='sales']", function() {
         demo.addHtml('./sales_sales.html', 'sales-sales-box');
